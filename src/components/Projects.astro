@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from "../config";
+import BrandIcon from "./BrandIcon.astro";
 const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 ---
 
@@ -43,7 +44,8 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                 {project.skills && project.skills.length > 0 && (
                   <div class="flex flex-wrap gap-1.5">
                     {project.skills.map((skill) => (
-                      <span class="text-xs px-2 py-1 rounded-full" style={`background-color: ${siteConfig.accentColor}08; color: ${siteConfig.accentColor}`}>
+                      <span class="text-xs px-2 py-1 rounded-full inline-flex items-center gap-1" style={`background-color: ${siteConfig.accentColor}08; color: ${siteConfig.accentColor}`}>
+                        <BrandIcon name={skill} size={12} />
                         {skill}
                       </span>
                     ))}

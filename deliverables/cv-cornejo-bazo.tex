@@ -1,0 +1,150 @@
+% Harvard-Format Professional CV — Andrea Cornejo Bazo
+% Compile with: xelatex cv-cornejo-bazo.tex
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.5in, top=0.4in, bottom=0.4in]{geometry}
+\usepackage{fontspec}
+\usepackage{fontawesome5}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{tabularx}
+
+% --- Fonts (macOS system fonts) ---
+\setmainfont{Times New Roman}
+\setsansfont{Helvetica Neue}
+
+% --- Colors ---
+\definecolor{headrule}{HTML}{2c3e50}
+\definecolor{linkblue}{HTML}{1a5276}
+
+% --- Hyperlinks ---
+\hypersetup{colorlinks=true, urlcolor=linkblue, linkcolor=linkblue, pdfborder={0 0 0}}
+
+% --- Section Formatting ---
+\titleformat{\section}
+  {\normalsize\bfseries\centering}
+  {}
+  {0em}
+  {\vspace{-0.3em}\hrulefill\quad}[\quad\hrulefill\vspace{-0.3em}]
+\titlespacing{\section}{0pt}{0.4em}{0.2em}
+
+% --- List Formatting ---
+\setlist[itemize]{nosep, left=0pt, label=\textbullet, itemsep=0pt, topsep=1pt}
+
+% --- No page numbers ---
+\pagestyle{empty}
+
+% --- Custom Commands ---
+\newcommand{\entry}[4]{%
+  \noindent\textbf{#1} \hfill #2 \par\nopagebreak
+  \textit{#3} \hfill \textit{#4} \par\nopagebreak
+}
+
+\begin{document}
+
+% ============================================
+% HEADER
+% ============================================
+\begin{center}
+  {\LARGE\bfseries Andrea Cornejo Bazo} \\[3pt]
+  \faIcon{map-marker-alt}\enspace Miraflores, Lima, Peru
+  \quad\faIcon{envelope}\enspace \href{mailto:a.cornejob@pucp.edu.pe}{a.cornejob@pucp.edu.pe}
+  \quad\faIcon{phone}\enspace +51 986 688 794
+  \\[2pt]
+  \faIcon{globe}\enspace \href{https://cofoundy.github.io/portfolio-andrea-cornejo-bazo}{cofoundy.github.io/portfolio-andrea-cornejo-bazo}
+\end{center}
+
+\vspace{-0.4em}
+\noindent\rule{\textwidth}{0.8pt}
+\vspace{-0.6em}
+
+% ============================================
+% EDUCATION
+% ============================================
+\section{Education}
+
+\entry{Pompeu Fabra University}{Barcelona, Spain}{Master's in Research in Political Sciences}{2010}
+\vspace{0.2em}
+
+\entry{Pontificia Universidad Cat\'olica del Per\'u (PUCP)}{Lima, Peru}{Licensure of Attorney by Law --- Graduated with Distinction}{2008}
+\vspace{0.2em}
+
+% ============================================
+% EXPERIENCE
+% ============================================
+\section{Experience}
+
+\entry{University of Central Florida}{Orlando, FL}{Project \& Data Manager --- Pilot Study}{Feb 2026 -- Present}
+\begin{itemize}
+  \item Lead data systems design, REDCap workflows, and operational planning for ongoing pilot research initiative
+\end{itemize}
+\vspace{0.2em}
+
+\entry{UCF College of Medicine --- Population Health Sciences}{Orlando, FL}{International Coordinator \& Institutional Liaison}{May 2021 -- 2025}
+\begin{itemize}
+  \item Negotiated MOUs with 4+ partner universities, enabling reciprocal faculty and student exchange programs
+  \item Launched UCF COM's first hybrid research/clinical study abroad course (``Public Health in the Andean Region'')
+  \item Coordinated marketing, recruitment, and cross-institutional academic collaborations across multiple departments
+\end{itemize}
+\vspace{0.2em}
+
+\entry{UCF --- ENTRUST Study (NIH/NIDA)}{Orlando, FL}{Project \& Data Manager}{Jun 2023 -- Mar 2025}
+\begin{itemize}
+  \item Managed operations for NIH-funded multilevel intervention targeting substance use and HIV/STI risk reduction among transgender women
+  \item Programmed REDCap instruments, workflows, and reporting systems across 10+ survey instruments
+  \item Developed Study Manual of Procedures (MOP) and delivered staff trainings on protocols and data collection
+\end{itemize}
+\vspace{0.2em}
+
+\entry{UCF / FIU --- TRUST Study (NIH/NIDA)}{South Florida}{Study Coordinator}{Jun 2022 -- 2024}
+\begin{itemize}
+  \item Coordinated implementation of NIH-funded PrEP uptake study, managing REDCap database, participant recruitment, and biological sample collection over 2+ years
+  \item Validated case report forms and survey instruments for completeness, accuracy, and protocol compliance
+\end{itemize}
+\vspace{0.2em}
+
+\entry{UPC Peru --- International Degrees Department}{Lima, Peru}{Professor}{Jan 2018 -- Present}
+\begin{itemize}
+  \item Teach Global Studies, Sociology, Organizational Behavior, and Critical Thinking in English across 8+ semesters
+\end{itemize}
+\vspace{0.2em}
+
+\entry{Yale University --- NIH Protocol No. 58}{Lima, Peru}{Study Coordinator}{Oct 2013 -- Sep 2015}
+\begin{itemize}
+  \item Coordinated field research at Santa Monica Women's Prison examining IPV and STI/HIV prevalence among 500+ incarcerated women
+  \item Led qualitative data collection (interviews, focus groups) and contributed to 3+ peer-reviewed manuscripts
+\end{itemize}
+\vspace{0.2em}
+
+\entry{Ernst \& Young Peru --- Human Capital}{Lima, Peru}{Lawyer --- Immigration \& Labor}{Dec 2008 -- Oct 2009}
+\begin{itemize}
+  \item Managed immigration procedures for 500+ foreign nationals across visa, residency, and work authorization matters
+\end{itemize}
+\vspace{0.2em}
+
+% ============================================
+% SELECTED PUBLICATIONS
+% ============================================
+\section{Selected Publications}
+
+\begin{itemize}
+  \item Cyrus, E., et al.\ incl.\ \textbf{Cornejo-Bazo, A.} (2025). Syndemic of STI symptoms, substance use and violence among incarcerated Peruvian women. \textit{Sex.\ Transm.\ Infect.}
+  \item Cyrus, E., et al.\ incl.\ \textbf{Cornejo-Bazo, A.} (2021). Prevalence of IPV, SUD and depression among incarcerated women in Lima. \textit{IJERPH}, 18(21), 11134.
+\end{itemize}
+\vspace{0.2em}
+
+% ============================================
+% SKILLS
+% ============================================
+\section{Skills \& Additional}
+
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\textbf{Technical:} & REDCap Programming, Data Management, Survey Design, IRB/NIH Compliance, Scientific Writing, Qualitative Methods \\
+\textbf{Languages:} & Spanish (Native), English (Bilingual/Professional) \\
+\textbf{Credentials:} & Bar of Law of Callao (Peru) \quad$\cdot$\quad Academic credentials certified by Josef Silny \& Associates (USA) \\
+\end{tabularx}
+
+\end{document}

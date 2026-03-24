@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from "../config";
+import BrandIcon from "./BrandIcon.astro";
 const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
 ---
 
@@ -41,7 +42,10 @@ const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
             <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3">
               <div>
                 <h3 class="text-lg font-semibold" style={`color: ${siteConfig.accentColor}`}>{exp.title}</h3>
-                <p class="text-base font-medium" style={`color: ${siteConfig.highlightColor}`}>{exp.company}</p>
+                <p class="text-base font-medium inline-flex items-center gap-1.5" style={`color: ${siteConfig.highlightColor}`}>
+                  <BrandIcon name={exp.company.split('—')[0].split('/')[0].trim()} size={16} />
+                  {exp.company}
+                </p>
               </div>
               <span class="text-xs px-3 py-1 rounded-full mt-2 sm:mt-0 self-start" style={`background-color: ${siteConfig.accentColor}08; color: ${siteConfig.accentColor}`}>
                 {exp.dateRange}
